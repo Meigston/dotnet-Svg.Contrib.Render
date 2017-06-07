@@ -2,7 +2,6 @@
 
 namespace Svg.Contrib.Render
 {
-  [PublicAPI]
   public enum ViewRotation
   {
     Normal = 0,

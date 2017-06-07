@@ -2,7 +2,6 @@
 
 namespace Svg.Contrib.Render.FingerPrint
 {
-  [PublicAPI]
   public enum Direction
   {
     Direction1 = 1,
@@ -15,7 +14,6 @@ namespace Svg.Contrib.Render.FingerPrint
     BottomToTop = Direction.Direction4
   }
 
-  [PublicAPI]
   public enum Alignment
   {
     TopLeft = 7,
@@ -29,13 +27,11 @@ namespace Svg.Contrib.Render.FingerPrint
     BottomRight = 3
   }
 
-  [PublicAPI]
   public enum CharacterSet
   {
     Utf8 = 8
   }
 
-  [PublicAPI]
   public enum BarCodeType
   {
     Code128,

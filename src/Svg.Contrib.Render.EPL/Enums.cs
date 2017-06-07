@@ -2,7 +2,6 @@
 
 namespace Svg.Contrib.Render.EPL
 {
-  [PublicAPI]
   public enum PrinterCodepage
   {
     Dos347 = 347,
@@ -27,14 +26,12 @@ namespace Svg.Contrib.Render.EPL
     Windows1255 = 1255
   }
 
-  [PublicAPI]
   public enum PrintOrientation
   {
     Top = 'T',
     Bottom = 'B'
   }
 
-  [PublicAPI]
   public enum BarCodeSelection
   {
     Code128Auto,
@@ -48,14 +45,12 @@ namespace Svg.Contrib.Render.EPL
     Code39WithCheckDigit
   }
 
-  [PublicAPI]
   public enum PrintHumanReadable
   {
     Yes = 'B',
     No = 'N'
   }
 
-  [PublicAPI]
   public enum ReverseImage
   {
     Normal = 'N',
