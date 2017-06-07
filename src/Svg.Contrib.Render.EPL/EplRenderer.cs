@@ -19,7 +19,6 @@ namespace Svg.Contrib.Render.EPL
       {
         throw new ArgumentNullException(nameof(eplCommands));
       }
-
       this.EplCommands = eplCommands;
       this.PrinterCodepage = printerCodepage;
       this.CountryCode = countryCode;
