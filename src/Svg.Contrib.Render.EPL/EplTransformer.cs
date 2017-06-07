@@ -10,7 +10,6 @@ using JetBrains.Annotations;
 
 namespace Svg.Contrib.Render.EPL
 {
-  [PublicAPI]
   public class EplTransformer : GenericTransformer
   {
     public const int DefaultOutputWidth = 816;

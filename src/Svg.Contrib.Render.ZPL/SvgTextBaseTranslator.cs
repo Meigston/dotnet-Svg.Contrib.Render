@@ -7,7 +7,6 @@ using JetBrains.Annotations;
 
 namespace Svg.Contrib.Render.ZPL
 {
-  [PublicAPI]
   public class SvgTextBaseTranslator<T> : SvgElementTranslatorBase<ZplContainer, T>
     where T : SvgTextBase
   {

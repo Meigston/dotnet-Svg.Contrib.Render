@@ -8,7 +8,6 @@ using JetBrains.Annotations;
 
 namespace Svg.Contrib.Render.ZPL
 {
-  [PublicAPI]
   public class SvgImageTranslator : SvgImageTranslatorBase<ZplContainer>
   {
     /// <exception cref="ArgumentNullException"><paramref name="zplTransformer" /> is <see langword="null" />.</exception>

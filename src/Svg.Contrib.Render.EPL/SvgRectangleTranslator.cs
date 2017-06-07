@@ -7,7 +7,6 @@ using JetBrains.Annotations;
 
 namespace Svg.Contrib.Render.EPL
 {
-  [PublicAPI]
   public class SvgRectangleTranslator : SvgElementTranslatorBase<EplContainer, SvgRectangle>
   {
     /// <exception cref="ArgumentNullException"><paramref name="eplTransformer" /> is <see langword="null" />.</exception>

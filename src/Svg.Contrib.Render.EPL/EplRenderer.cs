@@ -8,7 +8,6 @@ using JetBrains.Annotations;
 
 namespace Svg.Contrib.Render.EPL
 {
-  [PublicAPI]
   public class EplRenderer : RendererBase<EplContainer>
   {
     /// <exception cref="ArgumentNullException"><paramref name="eplCommands" /> is <see langword="null" />.</exception>

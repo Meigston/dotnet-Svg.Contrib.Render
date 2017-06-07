@@ -8,7 +8,6 @@ using JetBrains.Annotations;
 
 namespace Svg.Contrib.Render.FingerPrint
 {
-  [PublicAPI]
   public class SvgTextBaseTranslator<T> : SvgElementTranslatorBase<FingerPrintContainer, T>
     where T : SvgTextBase
   {

@@ -8,7 +8,6 @@ using Svg.Pathing;
 
 namespace Svg.Contrib.Render.EPL
 {
-  [PublicAPI]
   public class SvgPathTranslator : SvgElementTranslatorBase<EplContainer, SvgPath>
   {
     /// <exception cref="ArgumentNullException"><paramref name="eplTransformer" /> is <see langword="null" />.</exception>

@@ -8,7 +8,6 @@ using JetBrains.Annotations;
 
 namespace Svg.Contrib.Render.EPL
 {
-  [PublicAPI]
   public class SvgImageTranslator : SvgImageTranslatorBase<EplContainer>
   {
     /// <exception cref="ArgumentNullException"><paramref name="eplTransformer" /> is <see langword="null" />.</exception>

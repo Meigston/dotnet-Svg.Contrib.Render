@@ -8,7 +8,6 @@ using Svg.Pathing;
 
 namespace Svg.Contrib.Render.FingerPrint
 {
-  [PublicAPI]
   public class SvgPathTranslator : SvgElementTranslatorBase<FingerPrintContainer, SvgPath>
   {
     /// <exception cref="ArgumentNullException"><paramref name="fingerPrintTransformer" /> is <see langword="null" />.</exception>

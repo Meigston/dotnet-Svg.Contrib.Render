@@ -11,7 +11,6 @@ using JetBrains.Annotations;
 
 namespace Svg.Contrib.Render.FingerPrint
 {
-  [PublicAPI]
   public class FingerPrintTransformer : GenericTransformer
   {
     public const int DefaultOutputHeight = 1296;

@@ -6,7 +6,6 @@ using JetBrains.Annotations;
 
 namespace Svg.Contrib.Render.FingerPrint
 {
-  [PublicAPI]
   public class SvgImageTranslator : SvgImageTranslatorBase<FingerPrintContainer>
   {
     /// <exception cref="ArgumentNullException"><paramref name="fingerPrintTransformer" /> is <see langword="null" />.</exception>

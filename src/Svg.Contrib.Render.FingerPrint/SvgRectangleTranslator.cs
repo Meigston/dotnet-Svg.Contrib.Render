@@ -7,7 +7,6 @@ using JetBrains.Annotations;
 
 namespace Svg.Contrib.Render.FingerPrint
 {
-  [PublicAPI]
   public class SvgRectangleTranslator : SvgElementTranslatorBase<FingerPrintContainer, SvgRectangle>
   {
     /// <exception cref="ArgumentNullException"><paramref name="fingerPrintTransformer" /> is <see langword="null" />.</exception>

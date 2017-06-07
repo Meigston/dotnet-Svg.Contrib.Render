@@ -7,7 +7,6 @@ using JetBrains.Annotations;
 
 namespace Svg.Contrib.Render.FingerPrint
 {
-  [PublicAPI]
   public class FingerPrintRenderer : RendererBase<FingerPrintContainer>
   {
     /// <exception cref="ArgumentNullException"><paramref name="fingerPrintCommands" /> is <see langword="null" />.</exception>

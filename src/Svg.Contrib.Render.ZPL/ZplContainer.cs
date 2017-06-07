@@ -2,6 +2,5 @@
 
 namespace Svg.Contrib.Render.ZPL
 {
-  [PublicAPI]
   public class ZplContainer : CompoundContainer {}
 }

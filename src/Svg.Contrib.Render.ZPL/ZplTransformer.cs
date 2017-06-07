@@ -8,7 +8,6 @@ using JetBrains.Annotations;
 
 namespace Svg.Contrib.Render.ZPL
 {
-  [PublicAPI]
   public class ZplTransformer : GenericTransformer
   {
     public const int DefaultOutputHeight = 1296;
