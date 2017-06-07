@@ -8,12 +8,6 @@ namespace Svg.Contrib.Render.ZPL
     White = 'W'
   }
 
-  public enum Orientation
-  {
-    RightLeaningDiagnoal = 'R',
-    LeftLeaningDiagonal = 'L'
-  }
-
   public enum FieldOrientation
   {
     Normal = 'N',
