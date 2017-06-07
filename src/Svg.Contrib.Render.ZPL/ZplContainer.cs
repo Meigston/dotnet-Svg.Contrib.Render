@@ -1,4 +1,4 @@
 ﻿namespace Svg.Contrib.Render.ZPL
 {
-  public class ZplContainer : CompoundContainer {}
+  public class ZplContainer : CompoundContainer { }
 }

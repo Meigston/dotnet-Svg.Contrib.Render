@@ -172,7 +172,6 @@ namespace Svg.Contrib.Render.ZPL
       return $"^B3{(char) fieldOrientation},{(char) mod43Check},{barCodeHeight},{(char) printInterpretationLine},{(char) printInterpretationLineAboveCode}^FD{content}^FS";
     }
 
-
     /// <exception cref="ArgumentNullException"><paramref name="content" /> is <see langword="null" />.</exception>
     [NotNull]
     [Pure]

@@ -1,4 +1,4 @@
 ﻿namespace Svg.Contrib.Render.EPL
 {
-  public class EplContainer : CompoundContainer {}
+  public class EplContainer : CompoundContainer { }
 }
