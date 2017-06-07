@@ -103,7 +103,7 @@ namespace Svg.Contrib.Render.ZPL
     [Pure]
     public virtual string ChangeInternationalFont(CharacterSet characterSet)
     {
-      return $"^CI{characterSet.ToString("D")}";
+      return $"^CI{characterSet:D}";
     }
 
     /// <exception cref="ArgumentNullException"><paramref name="name" /> is <see langword="null" />.</exception>

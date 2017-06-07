@@ -147,7 +147,7 @@ namespace Svg.Contrib.Render.FingerPrint
     [Pure]
     public virtual string SelectCharacterSet(CharacterSet characterSet)
     {
-      return $"NASC {characterSet.ToString("D")}";
+      return $"NASC {characterSet:D}";
     }
 
     [NotNull]
