@@ -1,6 +1,4 @@
-﻿using JetBrains.Annotations;
-
-namespace Svg.Contrib.Render
+﻿namespace Svg.Contrib.Render
 {
   public enum ViewRotation
   {

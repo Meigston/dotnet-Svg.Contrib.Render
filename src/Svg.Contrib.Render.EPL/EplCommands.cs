@@ -11,7 +11,6 @@ namespace Svg.Contrib.Render.EPL
   public class EplCommands
   {
     [NotNull]
-    [ItemNotNull]
     private IDictionary<BarCodeSelection, string> BarCodeSelectionMappings { get; } = new Dictionary<BarCodeSelection, string>
                                                                                       {
                                                                                         {
@@ -44,7 +43,6 @@ namespace Svg.Contrib.Render.EPL
                                                                                       };
 
     [NotNull]
-    [ItemNotNull]
     private IDictionary<PrinterCodepage, string> PrinterCodepageMappings { get; } = new Dictionary<PrinterCodepage, string>
                                                                                     {
                                                                                       {
@@ -241,9 +239,7 @@ namespace Svg.Contrib.Render.EPL
         throw new ArgumentNullException(nameof(content));
       }
 
-      // ReSharper disable ExceptionNotDocumentedOptional
       var barcode = this.BarCodeSelectionMappings[barCodeSelection];
-      // ReSharper restore ExceptionNotDocumentedOptional
 
       return $@"B{horizontalStart},{verticalStart},{rotation},{barcode},{narrowBarWidth},{wideBarWidth},{height},{(char) printHumanReadable},""{content}""";
     }
@@ -276,9 +272,7 @@ namespace Svg.Contrib.Render.EPL
                                                 PrinterCodepage printerCodepage,
                                                 int countryCode)
     {
-      // ReSharper disable ExceptionNotDocumentedOptional
       var codepage = this.PrinterCodepageMappings[printerCodepage];
-      // ReSharper restore ExceptionNotDocumentedOptional
 
       return $"I{bytes},{codepage},{countryCode}";
     }

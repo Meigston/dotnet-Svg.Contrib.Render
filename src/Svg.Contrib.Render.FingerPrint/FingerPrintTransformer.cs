@@ -43,8 +43,6 @@ namespace Svg.Contrib.Render.FingerPrint
       }
     }
 
-    [Pure]
-    [NotNull]
     protected override Matrix CreateDeviceMatrix()
     {
       var deviceMatrix = new Matrix(1,
@@ -57,9 +55,7 @@ namespace Svg.Contrib.Render.FingerPrint
     }
 
     /// <exception cref="ArgumentNullException"><paramref name="deviceMatrix" /> is <see langword="null" />.</exception>
-    [Pure]
-    [NotNull]
-    protected override Matrix ApplyViewRotationOnDeviceMatrix([NotNull] Matrix deviceMatrix,
+    protected override Matrix ApplyViewRotationOnDeviceMatrix(Matrix deviceMatrix,
                                                               float magnificationFactor,
                                                               ViewRotation viewRotation = ViewRotation.Normal)
     {
@@ -116,10 +112,9 @@ namespace Svg.Contrib.Render.FingerPrint
     /// <exception cref="ArgumentNullException"><paramref name="svgRectangle" /> is <see langword="null" />.</exception>
     /// <exception cref="ArgumentNullException"><paramref name="sourceMatrix" /> is <see langword="null" />.</exception>
     /// <exception cref="ArgumentNullException"><paramref name="viewMatrix" /> is <see langword="null" />.</exception>
-    [Pure]
-    public override void Transform([NotNull] SvgRectangle svgRectangle,
-                                   [NotNull] Matrix sourceMatrix,
-                                   [NotNull] Matrix viewMatrix,
+    public override void Transform(SvgRectangle svgRectangle,
+                                   Matrix sourceMatrix,
+                                   Matrix viewMatrix,
                                    out float startX,
                                    out float startY,
                                    out float endX,
@@ -267,9 +262,7 @@ namespace Svg.Contrib.Render.FingerPrint
     }
 
     /// <exception cref="ArgumentNullException"><paramref name="bitmap" /> is <see langword="null" />.</exception>
-    [NotNull]
-    [Pure]
-    public override IEnumerable<byte> GetRawBinaryData([NotNull] Bitmap bitmap,
+    public override IEnumerable<byte> GetRawBinaryData(Bitmap bitmap,
                                                        bool invertBytes,
                                                        int numberOfBytesPerRow)
     {

@@ -1,6 +1,4 @@
-﻿using JetBrains.Annotations;
-
-namespace Svg.Contrib.Render.ZPL
+﻿namespace Svg.Contrib.Render.ZPL
 {
   public enum LineColor
   {

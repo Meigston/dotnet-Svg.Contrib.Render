@@ -1,6 +1,4 @@
-﻿using JetBrains.Annotations;
-
-namespace Svg.Contrib.Render.FingerPrint
+﻿namespace Svg.Contrib.Render.FingerPrint
 {
   public enum Direction
   {

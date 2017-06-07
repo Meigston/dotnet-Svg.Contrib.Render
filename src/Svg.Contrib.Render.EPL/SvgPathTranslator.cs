@@ -38,10 +38,10 @@ namespace Svg.Contrib.Render.EPL
     /// <exception cref="ArgumentNullException"><paramref name="sourceMatrix" /> is <see langword="null" />.</exception>
     /// <exception cref="ArgumentNullException"><paramref name="viewMatrix" /> is <see langword="null" />.</exception>
     /// <exception cref="ArgumentNullException"><paramref name="eplContainer" /> is <see langword="null" />.</exception>
-    public override void Translate([NotNull] SvgPath svgPath,
-                                   [NotNull] Matrix sourceMatrix,
-                                   [NotNull] Matrix viewMatrix,
-                                   [NotNull] EplContainer eplContainer)
+    public override void Translate(SvgPath svgPath,
+                                   Matrix sourceMatrix,
+                                   Matrix viewMatrix,
+                                   EplContainer eplContainer)
     {
       if (svgPath == null)
       {
@@ -73,9 +73,7 @@ namespace Svg.Contrib.Render.EPL
         return;
       }
 
-      // ReSharper disable ExceptionNotDocumentedOptional
       foreach (var svgLineSegment in svgPath.PathData.OfType<SvgLineSegment>())
-        // ReSharper restore ExceptionNotDocumentedOptional
       {
         this.TranslateSvgLineSegment(svgPath,
                                      svgLineSegment,

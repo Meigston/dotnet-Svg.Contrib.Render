@@ -27,7 +27,6 @@ namespace Svg.Contrib.Render
     protected GenericTransformer GenericTransformer { get; }
 
     [NotNull]
-    [ItemNotNull]
     private IDictionary<string, string> ImageIdentifierToVariableNameMap { get; } = new Dictionary<string, string>();
 
     /// <exception cref="ArgumentNullException"><paramref name="svgImage" /> is <see langword="null" />.</exception>
@@ -101,10 +100,10 @@ namespace Svg.Contrib.Render
     /// <exception cref="ArgumentNullException"><paramref name="sourceMatrix" /> is <see langword="null" />.</exception>
     /// <exception cref="ArgumentNullException"><paramref name="viewMatrix" /> is <see langword="null" />.</exception>
     /// <exception cref="ArgumentNullException"><paramref name="container" /> is <see langword="null" />.</exception>
-    public override void Translate([NotNull] SvgImage svgImage,
-                                   [NotNull] Matrix sourceMatrix,
-                                   [NotNull] Matrix viewMatrix,
-                                   [NotNull] TContainer container)
+    public override void Translate(SvgImage svgImage,
+                                   Matrix sourceMatrix,
+                                   Matrix viewMatrix,
+                                   TContainer container)
 
     {
       if (svgImage == null)
@@ -295,10 +294,8 @@ namespace Svg.Contrib.Render
                              .ToString();
       if (variableName.Length > 8)
       {
-        // ReSharper disable ExceptionNotDocumentedOptional
         variableName = variableName.Substring(0,
                                               8);
-        // ReSharper restore ExceptionNotDocumentedOptional
       }
 
       return variableName;

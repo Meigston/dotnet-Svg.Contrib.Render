@@ -41,10 +41,10 @@ namespace Svg.Contrib.Render.FingerPrint
     /// <exception cref="ArgumentNullException"><paramref name="sourceMatrix" /> is <see langword="null" />.</exception>
     /// <exception cref="ArgumentNullException"><paramref name="viewMatrix" /> is <see langword="null" />.</exception>
     /// <exception cref="ArgumentNullException"><paramref name="fingerPrintContainer" /> is <see langword="null" />.</exception>
-    public override void Translate([NotNull] T svgElement,
-                                   [NotNull] Matrix sourceMatrix,
-                                   [NotNull] Matrix viewMatrix,
-                                   [NotNull] FingerPrintContainer fingerPrintContainer)
+    public override void Translate(T svgElement,
+                                   Matrix sourceMatrix,
+                                   Matrix viewMatrix,
+                                   FingerPrintContainer fingerPrintContainer)
     {
       if (svgElement == null)
       {
@@ -118,10 +118,8 @@ namespace Svg.Contrib.Render.FingerPrint
 
       // TODO add regex for removing illegal characters ...
 
-      // ReSharper disable ExceptionNotDocumentedOptional
       return text.Replace("\"",
                           "'");
-      // ReSharper restore ExceptionNotDocumentedOptional
     }
 
     /// <exception cref="ArgumentNullException"><paramref name="svgElement" /> is <see langword="null" />.</exception>

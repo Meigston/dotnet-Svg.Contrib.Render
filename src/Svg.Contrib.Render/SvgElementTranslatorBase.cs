@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Drawing.Drawing2D;
-using JetBrains.Annotations;
 
 namespace Svg.Contrib.Render
 {
-  [PublicAPI]
   public abstract class SvgElementTranslatorBase<TContainer, TSvgElement> : ISvgElementTranslator<TContainer, TSvgElement>
     where TSvgElement : SvgElement
     where TContainer : Container
@@ -13,10 +11,10 @@ namespace Svg.Contrib.Render
     /// <exception cref="ArgumentNullException"><paramref name="sourceMatrix" /> is <see langword="null" />.</exception>
     /// <exception cref="ArgumentNullException"><paramref name="viewMatrix" /> is <see langword="null" />.</exception>
     /// <exception cref="ArgumentNullException"><paramref name="container" /> is <see langword="null" />.</exception>
-    void ISvgElementTranslator<TContainer>.Translate([NotNull] SvgElement svgElement,
-                                                     [NotNull] Matrix sourceMatrix,
-                                                     [NotNull] Matrix viewMatrix,
-                                                     [NotNull] TContainer container)
+    void ISvgElementTranslator<TContainer>.Translate(SvgElement svgElement,
+                                                     Matrix sourceMatrix,
+                                                     Matrix viewMatrix,
+                                                     TContainer container)
     {
       if (svgElement == null)
       {
@@ -45,9 +43,9 @@ namespace Svg.Contrib.Render
     /// <exception cref="ArgumentNullException"><paramref name="sourceMatrix" /> is <see langword="null" />.</exception>
     /// <exception cref="ArgumentNullException"><paramref name="viewMatrix" /> is <see langword="null" />.</exception>
     /// <exception cref="ArgumentNullException"><paramref name="container" /> is <see langword="null" />.</exception>
-    public abstract void Translate([NotNull] TSvgElement svgElement,
-                                   [NotNull] Matrix sourceMatrix,
-                                   [NotNull] Matrix viewMatrix,
-                                   [NotNull] TContainer container);
+    public abstract void Translate(TSvgElement svgElement,
+                                   Matrix sourceMatrix,
+                                   Matrix viewMatrix,
+                                   TContainer container);
   }
 }

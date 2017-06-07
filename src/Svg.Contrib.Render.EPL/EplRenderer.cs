@@ -38,19 +38,15 @@ namespace Svg.Contrib.Render.EPL
     public Encoding GetEncoding()
     {
       var codepage = (int) this.PrinterCodepage;
-      // ReSharper disable ExceptionNotDocumentedOptional
       var encoding = Encoding.GetEncoding(codepage);
-      // ReSharper restore ExceptionNotDocumentedOptional
 
       return encoding;
     }
 
     /// <exception cref="ArgumentNullException"><paramref name="svgDocument" /> is <see langword="null" />.</exception>
     /// <exception cref="ArgumentNullException"><paramref name="viewMatrix" /> is <see langword="null" />.</exception>
-    [NotNull]
-    [Pure]
-    public override EplContainer GetTranslation([NotNull] SvgDocument svgDocument,
-                                                [NotNull] Matrix viewMatrix)
+    public override EplContainer GetTranslation(SvgDocument svgDocument,
+                                                Matrix viewMatrix)
     {
       if (svgDocument == null)
       {

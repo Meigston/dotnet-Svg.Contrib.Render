@@ -14,7 +14,6 @@ namespace Svg.Contrib.Render
   {
     // TODO maybe switch to HybridDictionary - in this scenario we have just a bunch of translators, ... but ... community?!
     [NotNull]
-    [ItemNotNull]
     private IDictionary<Type, ISvgElementTranslator<TContainer>> SvgElementTranslators { get; } = new Dictionary<Type, ISvgElementTranslator<TContainer>>();
 
     /// <exception cref="ArgumentNullException"><paramref name="type" /> is <see langword="null" />.</exception>
@@ -28,10 +27,8 @@ namespace Svg.Contrib.Render
       }
 
       ISvgElementTranslator<TContainer> svgElementTranslator;
-      // ReSharper disable ExceptionNotDocumentedOptional
       if (!this.SvgElementTranslators.TryGetValue(type,
                                                   out svgElementTranslator))
-        // ReSharper restore ExceptionNotDocumentedOptional
       {
         return null;
       }
@@ -47,9 +44,7 @@ namespace Svg.Contrib.Render
         throw new ArgumentNullException(nameof(svgElementTranslator));
       }
 
-      // ReSharper disable ExceptionNotDocumentedOptional
       this.SvgElementTranslators[typeof(TSvgElement)] = svgElementTranslator;
-      // ReSharper restore ExceptionNotDocumentedOptional
     }
 
     /// <exception cref="ArgumentNullException"><paramref name="svgDocument" /> is <see langword="null" />.</exception>

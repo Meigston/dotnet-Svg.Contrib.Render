@@ -41,7 +41,6 @@ namespace Svg.Contrib.Render.ZPL
     }
 
     [NotNull]
-    [ItemNotNull]
     private IDictionary<int, FieldOrientation> SectorMappings { get; } = new Dictionary<int, FieldOrientation>
                                                                          {
                                                                            {
@@ -76,9 +75,7 @@ namespace Svg.Contrib.Render.ZPL
       var sector = this.GetRotationSector(sourceMatrix,
                                           viewMatrix);
 
-      // ReSharper disable ExceptionNotDocumentedOptional
       var fieldOrientation = this.SectorMappings[sector];
-      // ReSharper restore ExceptionNotDocumentedOptional
 
       return fieldOrientation;
     }
@@ -86,10 +83,9 @@ namespace Svg.Contrib.Render.ZPL
     /// <exception cref="ArgumentNullException"><paramref name="svgImage" /> is <see langword="null" />.</exception>
     /// <exception cref="ArgumentNullException"><paramref name="sourceMatrix" /> is <see langword="null" />.</exception>
     /// <exception cref="ArgumentNullException"><paramref name="viewMatrix" /> is <see langword="null" />.</exception>
-    [Pure]
-    public override void Transform([NotNull] SvgImage svgImage,
-                                   [NotNull] Matrix sourceMatrix,
-                                   [NotNull] Matrix viewMatrix,
+    public override void Transform(SvgImage svgImage,
+                                   Matrix sourceMatrix,
+                                   Matrix viewMatrix,
                                    out float startX,
                                    out float startY,
                                    out float endX,
@@ -148,10 +144,9 @@ namespace Svg.Contrib.Render.ZPL
     /// <exception cref="ArgumentNullException"><paramref name="svgTextBase" /> is <see langword="null" />.</exception>
     /// <exception cref="ArgumentNullException"><paramref name="sourceMatrix" /> is <see langword="null" />.</exception>
     /// <exception cref="ArgumentNullException"><paramref name="viewMatrix" /> is <see langword="null" />.</exception>
-    [Pure]
-    public override void Transform([NotNull] SvgTextBase svgTextBase,
-                                   [NotNull] Matrix sourceMatrix,
-                                   [NotNull] Matrix viewMatrix,
+    public override void Transform(SvgTextBase svgTextBase,
+                                   Matrix sourceMatrix,
+                                   Matrix viewMatrix,
                                    out float startX,
                                    out float startY,
                                    out float fontSize)
@@ -205,10 +200,9 @@ namespace Svg.Contrib.Render.ZPL
     /// <exception cref="ArgumentNullException"><paramref name="svgRectangle" /> is <see langword="null" />.</exception>
     /// <exception cref="ArgumentNullException"><paramref name="sourceMatrix" /> is <see langword="null" />.</exception>
     /// <exception cref="ArgumentNullException"><paramref name="viewMatrix" /> is <see langword="null" />.</exception>
-    [Pure]
-    public override void Transform([NotNull] SvgRectangle svgRectangle,
-                                   [NotNull] Matrix sourceMatrix,
-                                   [NotNull] Matrix viewMatrix,
+    public override void Transform(SvgRectangle svgRectangle,
+                                   Matrix sourceMatrix,
+                                   Matrix viewMatrix,
                                    out float startX,
                                    out float startY,
                                    out float endX,

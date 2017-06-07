@@ -1,6 +1,4 @@
-﻿using JetBrains.Annotations;
-
-namespace Svg.Contrib.Render.EPL
+﻿namespace Svg.Contrib.Render.EPL
 {
   public enum PrinterCodepage
   {
