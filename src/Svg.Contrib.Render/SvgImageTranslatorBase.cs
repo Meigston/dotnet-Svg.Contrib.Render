@@ -123,19 +123,14 @@ namespace Svg.Contrib.Render
         throw new ArgumentNullException(nameof(container));
       }
 
-      float sourceAlignmentWidth;
-      float sourceAlignmentHeight;
-      int horizontalStart;
-      int verticalStart;
-      int sector;
       this.GetPosition(svgImage,
                        sourceMatrix,
                        viewMatrix,
-                       out sourceAlignmentWidth,
-                       out sourceAlignmentHeight,
-                       out horizontalStart,
-                       out verticalStart,
-                       out sector);
+                       out float sourceAlignmentWidth,
+                       out float sourceAlignmentHeight,
+                       out int horizontalStart,
+                       out int verticalStart,
+                       out int sector);
 
       this.AddTranslationToContainer(svgImage,
                                      sourceMatrix,
@@ -174,17 +169,13 @@ namespace Svg.Contrib.Render
         throw new ArgumentNullException(nameof(viewMatrix));
       }
 
-      float startX;
-      float startY;
-      float endX;
-      float endY;
       this.GenericTransformer.Transform(svgImage,
                                         sourceMatrix,
                                         viewMatrix,
-                                        out startX,
-                                        out startY,
-                                        out endX,
-                                        out endY,
+                                        out float startX,
+                                        out float startY,
+                                        out float endX,
+                                        out float endY,
                                         out sourceAlignmentWidth,
                                         out sourceAlignmentHeight);
 
@@ -239,7 +230,6 @@ namespace Svg.Contrib.Render
       }
       else
       {
-        string variableName;
         this.StoreGraphics(svgImage,
                            sourceMatrix,
                            viewMatrix,
@@ -248,7 +238,7 @@ namespace Svg.Contrib.Render
                            horizontalStart,
                            verticalStart,
                            container,
-                           out variableName);
+                           out string variableName);
         if (variableName != null)
         {
           this.PrintGraphics(svgImage,

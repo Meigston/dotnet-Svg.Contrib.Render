@@ -26,9 +26,8 @@ namespace Svg.Contrib.Render
         throw new ArgumentNullException(nameof(type));
       }
 
-      ISvgElementTranslator<TContainer> svgElementTranslator;
       if (!this.SvgElementTranslators.TryGetValue(type,
-                                                  out svgElementTranslator))
+                                                  out ISvgElementTranslator<TContainer> svgElementTranslator))
       {
         return null;
       }
@@ -37,7 +36,8 @@ namespace Svg.Contrib.Render
     }
 
     /// <exception cref="ArgumentNullException"><paramref name="svgElementTranslator" /> is <see langword="null" />.</exception>
-    public virtual void RegisterTranslator<TSvgElement>([NotNull] ISvgElementTranslator<TContainer, TSvgElement> svgElementTranslator) where TSvgElement : SvgElement
+    public virtual void RegisterTranslator<TSvgElement>([NotNull] ISvgElementTranslator<TContainer, TSvgElement> svgElementTranslator)
+      where TSvgElement : SvgElement
     {
       if (svgElementTranslator == null)
       {

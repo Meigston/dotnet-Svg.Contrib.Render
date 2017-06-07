@@ -133,7 +133,6 @@ namespace Svg.Contrib.Render.ZPL
                       EndY = endY
                     };
 
-      float strokeWidth;
       this.ZplTransformer.Transform(svgLine,
                                     sourceMatrix,
                                     viewMatrix,
@@ -141,7 +140,7 @@ namespace Svg.Contrib.Render.ZPL
                                     out startY,
                                     out endX,
                                     out endY,
-                                    out strokeWidth);
+                                    out float strokeWidth);
 
       var horizontalStart = (int) startX;
       var verticalStart = (int) endY;
@@ -198,19 +197,14 @@ namespace Svg.Contrib.Render.ZPL
         throw new ArgumentNullException(nameof(zplContainer));
       }
 
-      float startX;
-      float endX;
-      float startY;
-      float endY;
-      float strokeWidth;
       this.ZplTransformer.Transform(svgRectangle,
                                     sourceMatrix,
                                     viewMatrix,
-                                    out startX,
-                                    out startY,
-                                    out endX,
-                                    out endY,
-                                    out strokeWidth);
+                                    out float startX,
+                                    out float startY,
+                                    out float endX,
+                                    out float endY,
+                                    out float strokeWidth);
 
       var horizontalStart = (int) startX;
       var verticalStart = (int) endY;
