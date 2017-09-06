@@ -162,9 +162,7 @@ namespace Svg.Contrib.Render.FingerPrint
       fingerPrintContainer.Body.Add(this.FingerPrintCommands.PrintImage(variableName));
     }
 
-    /// <exception cref="ArgumentNullException"><paramref name="svgImage" /> is <see langword="null" />.</exception>
-    /// <exception cref="ArgumentNullException"><paramref name="sourceMatrix" /> is <see langword="null" />.</exception>
-    /// <exception cref="ArgumentNullException"><paramref name="viewMatrix" /> is <see langword="null" />.</exception>
+    /// <inheritdoc />
     protected override void GetPosition(SvgImage svgImage,
                                         Matrix sourceMatrix,
                                         Matrix viewMatrix,
@@ -174,19 +172,6 @@ namespace Svg.Contrib.Render.FingerPrint
                                         out int verticalStart,
                                         out int sector)
     {
-      if (svgImage == null)
-      {
-        throw new ArgumentNullException(nameof(svgImage));
-      }
-      if (sourceMatrix == null)
-      {
-        throw new ArgumentNullException(nameof(sourceMatrix));
-      }
-      if (viewMatrix == null)
-      {
-        throw new ArgumentNullException(nameof(viewMatrix));
-      }
-
       base.GetPosition(svgImage,
                        sourceMatrix,
                        viewMatrix,

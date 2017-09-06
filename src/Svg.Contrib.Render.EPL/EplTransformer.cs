@@ -183,9 +183,7 @@ namespace Svg.Contrib.Render.EPL
       }
     }
 
-    /// <exception cref="ArgumentNullException"><paramref name="svgRectangle" /> is <see langword="null" />.</exception>
-    /// <exception cref="ArgumentNullException"><paramref name="sourceMatrix" /> is <see langword="null" />.</exception>
-    /// <exception cref="ArgumentNullException"><paramref name="viewMatrix" /> is <see langword="null" />.</exception>
+    /// <inheritdoc />
     public override void Transform(SvgRectangle svgRectangle,
                                    Matrix sourceMatrix,
                                    Matrix viewMatrix,
@@ -195,19 +193,6 @@ namespace Svg.Contrib.Render.EPL
                                    out float endY,
                                    out float strokeWidth)
     {
-      if (svgRectangle == null)
-      {
-        throw new ArgumentNullException(nameof(svgRectangle));
-      }
-      if (sourceMatrix == null)
-      {
-        throw new ArgumentNullException(nameof(sourceMatrix));
-      }
-      if (viewMatrix == null)
-      {
-        throw new ArgumentNullException(nameof(viewMatrix));
-      }
-
       base.Transform(svgRectangle,
                      sourceMatrix,
                      viewMatrix,
