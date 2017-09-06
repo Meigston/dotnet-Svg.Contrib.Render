@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Globalization;
-using JetBrains.Annotations;
 
 namespace Svg.Contrib.Render
 {
@@ -24,6 +23,7 @@ namespace Svg.Contrib.Render
       this.Value = percentage.Value;
     }
 
+    /// <inheritdoc />
     public override string ToString()
     {
       return this.ToString(CultureInfo.InvariantCulture);
@@ -42,15 +42,17 @@ namespace Svg.Contrib.Render
   {
     private static readonly TypeConverter Instance = TypeDescriptor.GetConverter(typeof(float));
 
-    public override bool CanConvertFrom([NotNull] ITypeDescriptorContext context,
-                                        [NotNull] Type sourceType)
+    /// <inheritdoc />
+    public override bool CanConvertFrom(ITypeDescriptorContext context,
+                                        Type sourceType)
     {
       return PercentageConverter.Instance.CanConvertFrom(context,
                                                          sourceType);
     }
 
-    public override bool CanConvertTo([NotNull] ITypeDescriptorContext context,
-                                      [NotNull] Type destinationType)
+    /// <inheritdoc />
+    public override bool CanConvertTo(ITypeDescriptorContext context,
+                                      Type destinationType)
     {
       if (destinationType == typeof(Percentage))
       {
@@ -61,17 +63,14 @@ namespace Svg.Contrib.Render
                                                        destinationType);
     }
 
-    public override object ConvertFrom([NotNull] ITypeDescriptorContext context,
-                                       [CanBeNull] CultureInfo culture,
-                                       [CanBeNull] object value)
+    /// <inheritdoc />
+    public override object ConvertFrom(ITypeDescriptorContext context,
+                                       CultureInfo culture,
+                                       object value)
     {
       if (value == null)
       {
         return new Percentage();
-      }
-      if (culture == null)
-      {
-        culture = CultureInfo.InvariantCulture;
       }
 
       if (value is string)
@@ -103,14 +102,15 @@ namespace Svg.Contrib.Render
                                                                              value));
     }
 
-    public override object ConvertTo([NotNull] ITypeDescriptorContext context,
-                                     [CanBeNull] CultureInfo culture,
-                                     [CanBeNull] object value,
-                                     [NotNull] Type destinationType)
+    /// <inheritdoc />
+    public override object ConvertTo(ITypeDescriptorContext context,
+                                     CultureInfo culture,
+                                     object value,
+                                     Type destinationType)
     {
       if (!(value is Percentage))
       {
-        throw new ArgumentNullException(nameof(value));
+        throw new NotSupportedException();
       }
       if (culture == null)
       {
