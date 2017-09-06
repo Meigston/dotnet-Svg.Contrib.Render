@@ -14,16 +14,21 @@ namespace Svg.Contrib.Render.EPL
   {
     public const int DefaultOutputWidth = 816;
     public const int DefaultOutputHeight = 1296;
+    public const int DefaultMaximumUpperFontSizeOverlap = 2;
 
-    /// <exception cref="ArgumentNullException"><paramref name="svgUnitReader" /> is <see langword="null" />.</exception>
+    /// <inheritdoc />
     public EplTransformer([NotNull] SvgUnitReader svgUnitReader,
                           int outputWidth = EplTransformer.DefaultOutputWidth,
-                          int outputHeight = EplTransformer.DefaultOutputHeight)
+                          int outputHeight = EplTransformer.DefaultOutputHeight,
+                          int maximumUpperFontSizeOverlap = EplTransformer.DefaultMaximumUpperFontSizeOverlap)
       : base(svgUnitReader,
              outputWidth,
-             outputHeight) { }
+             outputHeight)
+    {
+      this.MaximumUpperFontSizeOverlap = maximumUpperFontSizeOverlap;
+    }
 
-    protected virtual int MaximumUpperFontSizeOverlap { get; } = 2;
+    private int MaximumUpperFontSizeOverlap { get; }
 
     /// <exception cref="ArgumentNullException"><paramref name="svgTextBase" /> is <see langword="null" />.</exception>
     [Pure]

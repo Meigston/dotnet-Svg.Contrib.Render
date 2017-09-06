@@ -19,9 +19,9 @@ namespace Svg.Contrib.Render.ZPL
     }
 
     [NotNull]
-    protected ZplCommands ZplCommands { get; }
+    private ZplCommands ZplCommands { get; }
 
-    protected CharacterSet CharacterSet { get; }
+    private CharacterSet CharacterSet { get; }
 
     [NotNull]
     private IDictionary<CharacterSet, int> CharacterSetMappings { get; } = new Dictionary<CharacterSet, int>
