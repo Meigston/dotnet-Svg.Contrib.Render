@@ -16,7 +16,7 @@ namespace Svg.Contrib.Render.FingerPrint
     public const int DefaultOutputHeight = 1296;
     public const int DefaultOutputWidth = 816;
 
-    /// <exception cref="ArgumentNullException"><paramref name="svgUnitReader" /> is <see langword="null" />.</exception>
+    /// <inheritdoc />
     public FingerPrintTransformer([NotNull] SvgUnitReader svgUnitReader,
                                   int outputWidth = FingerPrintTransformer.DefaultOutputWidth,
                                   int outputHeight = FingerPrintTransformer.DefaultOutputHeight)

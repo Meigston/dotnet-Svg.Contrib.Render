@@ -13,7 +13,7 @@ namespace Svg.Contrib.Render.ZPL
     public const int DefaultOutputHeight = 1296;
     public const int DefaultOutputWidth = 816;
 
-    /// <exception cref="ArgumentNullException"><paramref name="svgUnitReader" /> is <see langword="null" />.</exception>
+    /// <inheritdoc />
     public ZplTransformer([NotNull] SvgUnitReader svgUnitReader,
                           int outputWidth = ZplTransformer.DefaultOutputWidth,
                           int outputHeight = ZplTransformer.DefaultOutputHeight)
