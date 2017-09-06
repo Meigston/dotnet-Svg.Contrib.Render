@@ -24,6 +24,7 @@ namespace Svg.Contrib.Render.FingerPrint
              outputWidth,
              outputHeight) { }
 
+    /// <inheritdoc />
     protected override Matrix CreateDeviceMatrix()
     {
       var deviceMatrix = new Matrix(1,
