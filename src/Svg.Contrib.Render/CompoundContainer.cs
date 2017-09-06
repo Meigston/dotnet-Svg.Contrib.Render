@@ -38,6 +38,7 @@ namespace Svg.Contrib.Render
     [NotNull]
     public ICollection<object> Footer { get; }
 
+    /// <inheritdoc />
     public IEnumerator<object> GetEnumerator()
     {
       // TODO so many allocations ... darmn :beers:
@@ -46,11 +47,13 @@ namespace Svg.Contrib.Render
                  .GetEnumerator();
     }
 
+    /// <inheritdoc />
     IEnumerator IEnumerable.GetEnumerator()
     {
       return this.GetEnumerator();
     }
 
+    /// <inheritdoc />
     public override string ToString()
     {
       return string.Join(Environment.NewLine,
